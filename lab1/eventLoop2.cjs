@@ -9,11 +9,12 @@ const f3 = () => {
 };
 
 function main() {
-  console.log("main");
-  setTimeout(f1, 0);
+  console.log("main 😄");
+  setTimeout(f1, 1000);
+  setTimeout(f2, 700);
   // setInterval(f1, 1000);
-  setImmediate(f2);
-  f3();
-  console.log("end");
+  // setImmediate(f2);
+  process.nextTick(f3);
+  console.log("end ✈️");
 }
 main();
